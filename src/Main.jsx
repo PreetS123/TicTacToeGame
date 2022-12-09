@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { DrawText } from "./Components/DrawText";
 import { Square } from "./Components/Square";
 
 const initialState = ["", "", "", "", "", "", "", "", ""];
@@ -98,11 +99,9 @@ export const Main = () => {
           {(winner || steps === 9) && (
             <div>
               {steps === 9 && !winner ? (
-                <img
-                  src="https://tse2.mm.bing.net/th?id=OIP._IOxisOWmfvrXsPV5dthlQHaDo&pid=Api&P=0"
-                  alt="Tic Tac Toe"
-                  style={{ width: "200px", height: "250px" }}
-                />
+                <div style={{ marginBottom: '20px'}} >
+                    <DrawText/>
+                 </div>
               ) : (
                 <img
                   src="https://tse1.mm.bing.net/th?id=OIP.KrFo_sZM44LV8d8LmFKwYAHaDu&pid=Api&P=0"
@@ -110,9 +109,9 @@ export const Main = () => {
                   style={{ width: "200px", height: "250px" }}
                 />
               )}
-              <div>
+              <div style={{marginTop:'20px'}} >
                 <h1>
-                  {steps === 9 && !winner ? "Its a Draw!" : `${winner} Win!`}
+                  {steps === 9 && !winner ? "" : `${winner} Win!`}
                 </h1>
               </div>
             </div>
