@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { DrawText } from "./Components/DrawText";
+import { Winner } from "./Components/Winner";
 import { Square } from "./Components/Square";
 
 const initialState = ["", "", "", "", "", "", "", "", ""];
@@ -67,55 +68,58 @@ export const Main = () => {
               Player 0
             </div>
           </div>
-          {!winner && steps < 9 && (
-            <div className="game-wrapper" onClick={onClickHandler}>
-              <Square
-                id={0}
-                state={gameState[0]}
-                className="border-right-bottom"
-              />
-              <Square
-                id={1}
-                state={gameState[1]}
-                className="border-right-bottom"
-              />
-              <Square id={2} state={gameState[2]} className="border-bottom" />
-              <Square
-                id={3}
-                state={gameState[3]}
-                className="border-right-bottom"
-              />
-              <Square
-                id={4}
-                state={gameState[4]}
-                className="border-right-bottom"
-              />
-              <Square id={5} state={gameState[5]} className="border-bottom" />
-              <Square id={6} state={gameState[6]} className="border-right" />
-              <Square id={7} state={gameState[7]} className="border-right" />
-              <Square id={8} state={gameState[8]} />
-            </div>
-          )}
-          {(winner || steps === 9) && (
-            <div>
-              {steps === 9 && !winner ? (
-                <div style={{ marginBottom: '20px'}} >
-                    <DrawText/>
-                 </div>
-              ) : (
-                <img
-                  src="https://tse1.mm.bing.net/th?id=OIP.KrFo_sZM44LV8d8LmFKwYAHaDu&pid=Api&P=0"
-                  alt="Tic Tac Toe"
-                  style={{ width: "200px", height: "250px" }}
+
+          <div style={{ marginBottom: "20px" }}>
+            <h1>{steps === 9 && !winner ? "" : `${winner} Win!`}</h1>
+          </div>
+
+          <div>
+            {!winner && steps < 9 && (
+              <div className="game-wrapper" onClick={onClickHandler}>
+                <Square
+                  id={0}
+                  state={gameState[0]}
+                  className="border-right-bottom"
                 />
-              )}
-              <div style={{marginTop:'20px'}} >
-                <h1>
-                  {steps === 9 && !winner ? "" : `${winner} Win!`}
-                </h1>
+                <Square
+                  id={1}
+                  state={gameState[1]}
+                  className="border-right-bottom"
+                />
+                <Square id={2} state={gameState[2]} className="border-bottom" />
+                <Square
+                  id={3}
+                  state={gameState[3]}
+                  className="border-right-bottom"
+                />
+                <Square
+                  id={4}
+                  state={gameState[4]}
+                  className="border-right-bottom"
+                />
+                <Square id={5} state={gameState[5]} className="border-bottom" />
+                <Square id={6} state={gameState[6]} className="border-right" />
+                <Square id={7} state={gameState[7]} className="border-right" />
+                <Square id={8} state={gameState[8]} />
               </div>
-            </div>
-          )}
+            )}
+          </div>
+
+          <div>
+            {(winner || steps === 9) && (
+              <div>
+                {steps === 9 && !winner ? (
+                  <div style={{ marginBottom: "20px" }}>
+                    <DrawText />
+                  </div>
+                ) : (
+                  <div>
+                    <Winner />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

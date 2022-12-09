@@ -1,0 +1,92 @@
+
+.winloader{
+    position:absolute;
+    top: 50%;
+    left:30%;
+    transform: translateX(100%) translateY(-5%);
+    color: azure;
+}
+
+.winloader span{
+    font-family: arial;
+    font-size: 40px;
+    color: rgba(226, 184, 184, .1);
+    display: inline-block;
+    transition: all .5s;
+    animation: animate 2s infinite;
+}
+.winloader span:nth-child(1){
+    animation-delay: .1s;
+}
+.winloader span:nth-child(2){
+    animation-delay: .2s;
+}
+.winloader span:nth-child(3){
+    animation-delay: .3s;
+}
+.winloader span:nth-child(4){
+    animation-delay: .4s;
+}
+
+.winloader span:nth-child(5){
+    animation-delay: .5s;
+}
+.winloader span:nth-child(6){
+    animation-delay: .6s;
+}
+.winloader span:nth-child(7){
+    animation-delay: .7s;
+}
+.winloader span:nth-child(8){
+    animation-delay: .8s;
+}
+
+.winloader span:nth-child(9){
+    animation-delay: .9s;
+}
+.winloader span:nth-child(10){
+    animation-delay: .10s;
+}
+
+.winloader span:nth-child(11){
+    animation-delay: .11s;
+}
+.winloader span:nth-child(12){
+    animation-delay: .12s;
+}
+
+.winloader span:nth-child(13){
+    animation-delay: .13s;
+}
+.winloader span:nth-child(14){
+    animation-delay: .14s;
+}
+
+.winloader span:nth-child(15){
+    animation-delay: .15s;
+}
+.winloader span:nth-child(16){
+    animation-delay: .16s;
+}
+
+
+@keyframes animate{
+    0%{
+        color: yellow;
+        transform: translate3d(0);
+        margin-left: 0;
+    }
+    25%{
+        font-size: 35px;
+        color: red;
+        transform: translate3d(1500px);
+        margin-left: 10px;
+        text-shadow:0 15px 5px rgba(0,0,0,1);
+
+    }
+    100%{
+        color:violet;
+        transform: translate3d(0);
+        margin-left: 0px;
+    }
+}
