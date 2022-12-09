@@ -1,0 +1,28 @@
+
+.square-container{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.border-right-bottom{
+    border-right:2px solid #E2EBEF;
+    border-bottom: 2px solid #E2EBEF;
+}
+.border-right{
+    border-right:2px solid #E2EBEF;
+}
+.border-bottom{
+    border-bottom: 2px solid #E2EBEF;
+}
+.x-color{
+    color: #41BED7;
+}
+.y-color{
+    color: #aa459d;
+}
